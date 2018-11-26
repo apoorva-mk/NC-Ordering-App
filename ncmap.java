@@ -80,7 +80,8 @@ class map
 		nc6.addActionListener(new ActionListener(){  
 		public void actionPerformed(ActionEvent e){  
            	tf.setText("GB");
-		user.main()
+		f.dispose();
+		user.main(new String[0]);
   
         	}  
     		});

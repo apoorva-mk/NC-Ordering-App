@@ -5,6 +5,8 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.awt.event.*;
+import java.awt.Color;
+
 public class NCapp extends JFrame{
 	private int y=0;
 	private static String[] arr=new String[5];
@@ -21,7 +23,7 @@ public class NCapp extends JFrame{
 	
 	public void Menu()
 	{
-		
+		frame.getContentPane().setBackground(Color.pink);
 		name.setText("Menu");
 		name.setBounds(270,50,100,20);
 		proceed.setText("Proceed");
@@ -166,7 +168,7 @@ public class NCapp extends JFrame{
 					Bill();
 				}
 			});
-		frame.setSize(1000,1000);
+		frame.setSize(700,1000);
 		frame.setLayout(null);
 		frame.setVisible(true);
 	
@@ -181,7 +183,8 @@ public class NCapp extends JFrame{
 		JLabel quant=new JLabel();
 		JLabel pp=new JLabel();
 		JLabel total=new JLabel();
-		
+		framebill.getContentPane().setBackground(Color.cyan);
+
 		bill.setBounds(400,50,1000,100);
 		bill.setText("Bill"+"    "+custname+"   "+custphone);
 		framebill.add(bill);
