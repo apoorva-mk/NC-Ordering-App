@@ -48,9 +48,11 @@ public class user extends JComponent implements ActionListener{
 			n=name.getText();
 			pn=number.getText();
 			f.dispose();
-			NCapp.main(new String[0]);
+			String details[]={n,pn};
+			NCapp.main(details);
 		}
 	}
+
 
 	public static void main(String[] args) {
 		user obj =new user();
