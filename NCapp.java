@@ -166,6 +166,7 @@ public class NCapp extends JFrame{
 				public void actionPerformed(ActionEvent e)
 				{
 					Bill();
+					frame.dispose();
 				}
 			});
 		frame.setSize(700,1000);
@@ -178,13 +179,26 @@ public class NCapp extends JFrame{
 	static String custphone=null;
 	public void Bill()
 	{
+		JButton reorder= new JButton();
 		JLabel bill=new JLabel();
 		JLabel desc=new JLabel();
 		JLabel quant=new JLabel();
 		JLabel pp=new JLabel();
 		JLabel total=new JLabel();
 		framebill.getContentPane().setBackground(Color.cyan);
+		reorder.setBounds(400,620,200,30);
+		reorder.setText("Done!!");
+		reorder.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				framebill.dispose();
 
+				//ncmap.main(new String[0]);
+				
+			}
+		});
+		bill.setText("Order again");
 		bill.setBounds(400,50,1000,100);
 		bill.setText("Bill"+"    "+custname+"   "+custphone);
 		framebill.add(bill);
@@ -221,6 +235,7 @@ public class NCapp extends JFrame{
 		total.setText("Total cost = "+sum.toString());
 		total.setBounds(450,500,200,200);
 		framebill.add(total);
+		framebill.add(reorder);
 		framebill.add(pp);
 		framebill.add(quant);
 		framebill.add(desc);
