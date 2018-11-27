@@ -21,7 +21,7 @@ class map
  
     	public void showmap() 
 	{  
-		JFrame f=new JFrame("Button Example");
+		JFrame f=new JFrame("NC-Ordering-App");
 	  	JLabel map=new JLabel();
 		JButton nc6=new JButton("GB NC");  
 		nc6.setBounds(50,30,95,30);
